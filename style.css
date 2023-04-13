@@ -1,0 +1,17 @@
+.container{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: darkgrey;
+  width: 320px;
+  height: 320px;
+  border: 0.5px solid darkgrey;
+}
+
+div div{
+  width: 19px;
+  height: 19px;
+  background-color: rgb(230, 230, 230);
+  display: inline-block;
+  margin: 0.5px;
+}
