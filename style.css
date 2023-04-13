@@ -3,22 +3,22 @@
   align-items: center;
   flex-wrap: wrap;
   background-color: darkgrey;
-  width: 320px;
-  height: 320px;
+  width: 640px;
+  height: 640px;
   border: 0.5px solid darkgrey;
 }
 
 .grid{
-  width: 19px;
-  height: 19px;
+  width: 39px;
+  height: 39px;
   background-color: rgb(230, 230, 230);
   display: inline-block;
   margin: 0.5px;
-  transition: background-color 0.1s ease;
+  transition: background-color 0.08s ease;
 }
 
 .grid:hover{
-  background-color: rgb(100, 100, 100);
+  background-color: rgb(80, 80, 80);
 }
 
 .grid:not(:hover){
