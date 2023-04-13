@@ -1,7 +1,7 @@
 const container = document.querySelector(".container");
-let containerSize = 16;
+size = "small";
 
-createContainer(containerSize);
+createContainer(16);
 
 function createContainer(containerSize){
   let grids = document.querySelectorAll(".grid");
@@ -24,8 +24,8 @@ function createContainer(containerSize){
 }
 
 small = document.getElementById("small").addEventListener("click", function(){
-  containerSize = 16;
-  createContainer(containerSize);
+  size = "small";
+  createContainer(16);
   let grids = document.querySelectorAll(".grid");
   grids.forEach(grid => {
     grid.style.width = "39px";
@@ -34,8 +34,8 @@ small = document.getElementById("small").addEventListener("click", function(){
 });
 
 medium = document.getElementById("medium").addEventListener("click", function(){
-  containerSize = 32;
-  createContainer(containerSize);
+  size = "medium";
+  createContainer(32);
   let grids = document.querySelectorAll(".grid");
   grids.forEach(grid => {
     grid.style.width = "19px";
@@ -44,10 +44,38 @@ medium = document.getElementById("medium").addEventListener("click", function(){
 });
 
 big = document.getElementById("big").addEventListener("click", function(){
+  size = "big";
   createContainer(64);
   let grids = document.querySelectorAll(".grid");
   grids.forEach(grid => {
     grid.style.width = "9px";
     grid.style.height = "9px";
   });
+});
+
+clear = document.getElementById("clear").addEventListener("click", function(){
+  if (size == "small") {
+    createContainer(16);
+    let grids = document.querySelectorAll(".grid");
+    grids.forEach(grid => {
+      grid.style.width = "39px";
+      grid.style.height = "39px";
+    });
+  }
+  else if (size == "medium") {
+    createContainer(32);
+    let grids = document.querySelectorAll(".grid");
+    grids.forEach(grid => {
+      grid.style.width = "19px";
+      grid.style.height = "19px";
+    });
+  }
+  else if (size == "big") {
+    createContainer(64);
+    let grids = document.querySelectorAll(".grid");
+    grids.forEach(grid => {
+      grid.style.width = "9px";
+      grid.style.height = "9px";
+    });
+  }
 });
