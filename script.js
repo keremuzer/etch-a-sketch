@@ -11,6 +11,14 @@ function createContainer(containerSize){
       let newGrid = document.createElement("div");
       newGrid.classList.add("grid");
       container.appendChild(newGrid);
+      newGrid.addEventListener("mousedown", function(){
+        newGrid.style.backgroundColor = "rgb(80, 80, 80)";
+      });
+      newGrid.addEventListener("mouseover", function(e){
+        if (e.buttons === 1) {
+          newGrid.style.backgroundColor = "rgb(80, 80, 80)";
+        }
+      });
     }
   }
 }
